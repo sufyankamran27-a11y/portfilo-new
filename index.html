@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sufyan Kamran — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-dot"></div>
+  </div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-sk">SK</span>
+      <div class="logo-text">SUFYAN<span>KAMRAN</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+      <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+      <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+      <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn"><i class="fa-solid fa-sun" id="themeIcon"></i></button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMenu()"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#about" onclick="closeMenu()"><i class="fa-solid fa-user"></i> About</a>
+    <a href="#skills" onclick="closeMenu()"><i class="fa-solid fa-code"></i> Skills</a>
+    <a href="#experience" onclick="closeMenu()"><i class="fa-solid fa-briefcase"></i> Experience</a>
+    <a href="#projects" onclick="closeMenu()"><i class="fa-solid fa-folder-open"></i> Projects</a>
+    <a href="#contact" onclick="closeMenu()"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </div>
+
+  <!-- SIDEBARS -->
+  <div class="social-sidebar">
+    <a href="https://www.instagram.com/sufyan___sheikh_" target="_blank" class="s-link"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://github.com/sufyankamran27-a11y" target="_blank" class="s-link"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/sufyan-kamran-1b2424384/" target="_blank" class="s-link"><i class="fa-brands fa-linkedin-in"></i></a>
+    <div class="sidebar-line"></div>
+  </div>
+  <div class="email-sidebar">
+    <a href="mailto:sufyankamran27@gmail.com" class="email-rotated">sufyankamran27@gmail.com</a>
+    <div class="sidebar-line"></div>
+  </div>
+
+  <!-- ===================== HOME ===================== -->
+  <section id="home">
+    <!-- Animated grid background -->
+    <div class="grid-bg"></div>
+
+    <!-- Floating orbs -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content">
+      <!-- <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for work</span>
+      </div> -->
+       <p class="typing-text">HI, MY NAME IS</p>
+  <h1 class="hero-name">
+   
+  <span class="name-line">SHEIKH MUHAMMAD</span>
+  <span class="name-line accent">
+    SUFYAN KAMRAN<span class="dot-accent">.</span>
+  </span>
+</h1>
+      <div class="hero-role">
+        <span>I build </span>
+        <span class="typing-wrap">
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </span>
+      </div>
+      <p class="hero-desc">
+        A passionate <strong>Front-End Developer</strong> crafting clean, pixel-perfect, 
+        and blazing-fast web experiences using <a href="#skills">JavaScript</a>, 
+        <a href="#skills">Tailwind CSS</a>, and modern UI/UX practices.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <span class="btn-bg"></span>
+          <i class="fa-solid fa-folder-open"></i>
+          <span>View Projects</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Hire Me</span>
+        </a>
+      </div>
+
+    <!-- Scroll indicator -->
+    <!-- <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div> -->
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="section-header">
+      <!-- <div class="section-eyebrow">01 — About</div> -->
+      <h2 class="section-title">ABOUT ME<span class="dot">.</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap" data-reveal="left">
+        <div class="about-img-frame">
+          <div class="frame-corner fc-tl"></div>
+          <div class="frame-corner fc-tr"></div>
+          <div class="frame-corner fc-bl"></div>
+          <div class="frame-corner fc-br"></div>
+          <div class="about-img-box">
+            <img src="./pic.png" alt="Sufyan Kamran" onerror="this.style.display='none'">
+            <div class="img-placeholder"><i class="fa-solid fa-user"></i></div>
+          </div>
+        </div>
+        <!-- <div class="about-tag at1">Front-End Dev</div>
+        <div class="about-tag at2">Class 10 🎓</div> -->
+      </div>
+      <div class="about-text" data-reveal="right">
+        <p class="wave-line">Hello! <span class="wave">👋</span></p>
+        <p>My name is <strong>Sheikh Muhammad Sufyan</strong>. I'm a passionate <a href="#">Class 10 student</a> who loves building visually stunning, interactive, and high-performance web interfaces.</p>
+        <p>I've dedicated myself to mastering front-end development — turning complex design ideas into clean, pixel-perfect, fully responsive code. Currently sharpening my skills at the <a href="#">Saylani Mass IT Training Program</a>.</p>
+        <p>Technologies I work with:</p>
+        <ul class="tech-grid">
+          <li><span class="tech-arrow">▶</span>JavaScript (ES6+)</li>
+          <li><span class="tech-arrow">▶</span>Tailwind CSS</li>
+          <li><span class="tech-arrow">▶</span>Responsive Design</li>
+          <li><span class="tech-arrow">▶</span>Bootstrap</li>
+          <li><span class="tech-arrow">▶</span>HTML5 / CSS3</li>
+          <li><span class="tech-arrow">▶</span>GitHub</li>
+        </ul>
+        <a href="#" class="btn btn-primary"><span class="btn-bg"></span><i class="fa-solid fa-download"></i><span>Download CV</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <div class="section-header">
+      <div class="section-eyebrow">02 — Skills</div>
+      <h2 class="section-title">WHAT I DO<span class="dot">.</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="what-grid">
+      <div class="what-image" data-reveal="left">
+        <div class="img-glow-wrap">
+          <img src="./WhatsApp Image 2026-05-25 at 4.04.21 PM.jpeg" alt="">
+          <div class="img-glow"></div>
+        </div>
+      </div>
+      <div class="what-content" data-reveal="right">
+        <h3 class="what-heading">Frontend Web Development</h3>
+        <div class="skills-row">
+          <div class="skill-chip" data-name="HTML">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <span>HTML5</span>
+          </div>
+          <div class="skill-chip" data-name="CSS">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <span>CSS3</span>
+          </div>
+          <div class="skill-chip" data-name="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-chip" data-name="Tailwind">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
+            <span>Tailwind</span>
+          </div>
+          <div class="skill-chip" data-name="Bootstrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+            <span>Bootstrap</span>
+          </div>
+          <div class="skill-chip" data-name="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            <span>GitHub</span>
+          </div>
+        </div>
+        <ul class="skill-points">
+          <li><i class="fa-solid fa-check-circle"></i>Clean & responsive HTML/CSS layouts</li>
+          <li><i class="fa-solid fa-check-circle"></i>Modern UI using Tailwind & Bootstrap</li>
+          <li><i class="fa-solid fa-check-circle"></i>Interactive JavaScript components</li>
+          <li><i class="fa-solid fa-check-circle"></i>GitHub version control workflow</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <div class="section-header">
+      <!-- <div class="section-eyebrow">03 — Experience</div> -->
+      <h2 class="section-title">EXPERIENCE<span class="dot">.</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-reveal="up">
+        <div class="tl-year">2026</div>
+        <div class="tl-dot">
+          <div class="tl-dot-inner"></div>
+          <div class="tl-pulse"></div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-accent"></div>
+          <div class="tl-header">
+            <div class="tl-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h3>Web Development Trainee</h3>
+              <span>Saylani Mass IT Training (SMIT)</span>
+            </div>
+          </div>
+          <ul>
+            <li>Developing responsive web interfaces using HTML, CSS, and Bootstrap.</li>
+            <li>Learning and implementing interactive features with JavaScript.</li>
+            <li>Collaborating on technical projects and solving coding challenges.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item" data-reveal="up">
+        <div class="tl-year">2026</div>
+        <div class="tl-dot">
+          <div class="tl-dot-inner"></div>
+          <div class="tl-pulse"></div>
+        </div>
+        <div class="tl-card">
+          <div class="tl-card-accent" style="background:linear-gradient(90deg,#7c3aed,transparent)"></div>
+          <div class="tl-header">
+            <div class="tl-icon" style="background:rgba(124,58,237,.15);color:#7c3aed"><i class="fa-solid fa-network-wired"></i></div>
+            <div>
+              <h3>Cybersecurity & Networking Student</h3>
+              <span>Cisco Networking Academy</span>
+            </div>
+          </div>
+          <ul>
+            <li>Analyzed network protocols and OSI layer configurations.</li>
+            <li>Gained hands-on experience with data security and network devices.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="section-header">
+      <!-- <div class="section-eyebrow">04 — Projects</div> -->
+      <h2 class="section-title">FEATURED PROJECTS<span class="dot">.</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card" data-reveal="up" style="--delay:0s">
+        <div class="pc-glow" style="--glow-color:#00b4d8"></div>
+        <div class="pc-thumb p1">
+          <div class="pc-thumb-text">SHOP</div>
+          <div class="pc-thumb-icon"><i class="fa-solid fa-shop"></i></div>
+        </div>  
+        <div class="pc-body">
+          <div class="pc-tags"><span class="ptag">React</span><span class="ptag">Tailwind</span><span class="ptag">API</span></div>
+          <h3 class="pc-name">E-Commerce Dashboard</h3>
+          <p class="pc-desc">Secure Auth, API data fetching, and inventory management with full admin panel.</p>
+          <a href="https://celadon-froyo-0753bd.netlify.app/" target="_blank" class="pc-link">
+            View Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card" data-reveal="up" style="--delay:0.1s">
+        <div class="pc-glow" style="--glow-color:#7c3aed"></div>
+        <div class="pc-thumb p2">
+          <div class="pc-thumb-text">AI</div>
+          <div class="pc-thumb-icon"><i class="fa-solid fa-robot"></i></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags"><span class="ptag">JS</span><span class="ptag">CSS</span><span class="ptag">API</span></div>
+          <h3 class="pc-name">AI Chatbot Website</h3>
+          <p class="pc-desc">Modern chatbot UI with typing animation, real-time responses, and clean interface.</p>
+          <a href="https://incomparable-kelpie-e03d13.netlify.app/" target="_blank" class="pc-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-reveal="up" style="--delay:0.2s">
+        <div class="pc-glow" style="--glow-color:#059669"></div>
+        <div class="pc-thumb p3">
+          <div class="pc-thumb-text">GESTURE</div>
+          <div class="pc-thumb-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags"><span class="ptag">JS</span><span class="ptag">AI</span><span class="ptag">Canvas</span></div>
+          <h3 class="pc-name">Gesture AI</h3>
+          <p class="pc-desc">Image recognition project using AI and JavaScript for real-time gesture detection.</p>
+          <a href="https://helpful-starburst-d0be33.netlify.app/" target="_blank" class="pc-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-reveal="up" style="--delay:0s">
+        <div class="pc-glow" style="--glow-color:#d97706"></div>
+        <div class="pc-thumb p4">
+          <div class="pc-thumb-text">QUIZ</div>
+          <div class="pc-thumb-icon"><i class="fa-solid fa-question-circle"></i></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+          <h3 class="pc-name">JS Quizzer</h3>
+          <p class="pc-desc">Interactive JavaScript quiz application to test programming knowledge with score tracking.</p>
+          <a href="https://deft-pudding-ad85ee.netlify.app/" target="_blank" class="pc-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-reveal="up" style="--delay:0.1s">
+        <div class="pc-glow" style="--glow-color:#0284c7"></div>
+        <div class="pc-thumb p5">
+          <div class="pc-thumb-text">AUTH</div>
+          <div class="pc-thumb-icon"><i class="fa-solid fa-lock"></i></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags"><span class="ptag">React</span><span class="ptag">Firebase</span></div>
+          <h3 class="pc-name">Login / Signup Page</h3>
+          <p class="pc-desc">Clean authentication UI with React and Firebase backend integration.</p>
+          <a href="https://rococo-liger-e7b98b.netlify.app/" target="_blank" class="pc-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-reveal="up" style="--delay:0.2s">
+        <div class="pc-glow" style="--glow-color:#dc2626"></div>
+        <div class="pc-thumb p6">
+          <div class="pc-thumb-text">NET</div>
+          <div class="pc-thumb-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+          <h3 class="pc-name">NetAcad Lab</h3>
+          <p class="pc-desc">Cybersecurity simulation and network configuration project.</p>
+          <a href="https://moonlit-melomakarona-4f7fe2.netlify.app/" target="_blank" class="pc-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="section-header">
+      <!-- <div class="section-eyebrow">05 — Contact</div> -->
+      <h2 class="section-title">GET IN TOUCH<span class="dot">.</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-wrapper" data-reveal="up">
+      <p class="contact-intro">Have a project in mind or want to work together? Feel free to reach out — I'll get back within 24 hours!</p>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <div class="input-wrap"><input type="text" class="form-input" placeholder="Your Name"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <div class="input-wrap"><input type="email" class="form-input" placeholder="your@email.com"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Message</label>
+          <div class="input-wrap"><textarea class="form-input" placeholder="What would you like to say?"></textarea></div>
+        </div>
+        <button class="btn btn-primary send-btn">
+          <span class="btn-bg"></span>
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Send Message</span>
+        </button>
+        <div class="contact-email">or email directly: <a href="mailto:sufyankamran27@gmail.com">sufyankamran27@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">SK</div>
+      <div class="footer-copy">© 2026 <span>Sufyan Kamran</span>. Built with <span class="heart">❤️</span> in Karachi, Pakistan.</div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/sufyan___sheikh_" class="fsocial" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/sufyankamran27-a11y" class="fsocial" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sufyan-kamran-1b2424384/" class="fsocial" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
